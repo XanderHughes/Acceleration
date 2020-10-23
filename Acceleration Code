@@ -1,0 +1,46 @@
+def AccelerationCmS(): 
+  distanceCm = int(input("Enter the total distance in Cm: "))
+  timeSe = int(input("Enter the time it took to get to total distance in seconds: "))
+  accelerationCmS = distanceCm/timeSe
+  print("The acceleration is: ", accelerationCmS, " Cm per second")
+
+
+def AccelerationMS():
+
+  distanceM = int(input("Enter the total distance in Meters: "))
+  timeS = int(input("Enter the time it took to get to total distance in seconds: "))
+  accelerationMS = distanceM/timeS
+  print("The acceleration is: ", accelerationMS, "Meters per second: ")
+
+
+def AccelerationCMM():
+
+  distanceCM = int(input("Enter the total distance in Cm: "))
+  timeM = int(input("Enter the time it took to get to the total distance in Minutes: "))
+  accelerationCmM = distanceCM/timeM
+  print("The acceleration is: ", accelerationCmM, "Cm per minute")
+
+
+def AccelerationMM():
+  distanceMe = int(input("Enter the total distance in Meters: "))
+  timeM = int(input("Enter the time it took to get to the total distance in Minutes: "))
+  accelerationMM = distanceMe/timeM
+  print("The acceleration is: ", accelerationMM, "Meters per minute")
+
+
+def control():
+  userChoice = input("Would you like to calculate acceleration for\n Cm per second (1)\n Cm per minute (2)\n Meters per second (3)\n Meters per minute (4)\n Enter your choice: ")
+  if userChoice == '1':
+    AccelerationCmS()
+  elif userChoice == '2':
+    AccelerationCMM()
+  elif userChoice == '3':
+    AccelerationMS()
+  elif userChoice == '4':
+    AccelerationMM()
+  else:
+    print("invalid choice. Please choose another number.")
+    control()
+
+
+control()
